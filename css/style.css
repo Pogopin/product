@@ -64,7 +64,15 @@ button {
 }
 
 .header__menu-mobile.active {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header__menu-mobile {
@@ -72,10 +80,11 @@ button {
   background-color: #02897A;
   position: absolute;
   right: 0;
-  top: 35px;
+  top: 45px;
   width: 300px;
-  opacity: .95;
+  height: 100vh;
   padding: 15px;
+  z-index: 10;
 }
 
 @media (max-width: 440px) {
@@ -98,6 +107,18 @@ button {
           align-items: center;
 }
 
+@media (max-width: 1100px) {
+  .nav__mobile {
+    margin: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .nav__mobile {
+    margin: 0;
+  }
+}
+
 .nav__mobile-item {
   margin-bottom: 20px;
   text-align: center;
@@ -117,6 +138,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 40px;
 }
 
 .mobile__btn-white {
@@ -862,6 +884,12 @@ button {
 }
 
 @media (max-width: 440px) {
+  .quick__content-review p {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 440px) {
   .reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1413,8 +1441,14 @@ button {
   margin-top: 10px;
   text-align: center;
   margin-bottom: 46px;
+  
+  
+  
 }
-
+.animate__swing {
+	visibility: visible !important;
+	animation-name: swing !important;
+}
 .no-mr {
   margin-right: 0;
 }

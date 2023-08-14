@@ -56,8 +56,10 @@ button {
 }
 //mobile menu
 .header__menu-mobile.active{
-    display: block;
-    
+    // display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -67,11 +69,12 @@ button {
     background-color: #02897A;
     position: absolute;
     right: 0;
-    top: 35px;
+    top: 45px;
     // bottom: 50%;
     width: 300px;
-    opacity: .95;
+    height: 100vh;
     padding: 15px;
+    z-index: 10;
 
     @media(max-width: 440px) {
         // display: block;
@@ -83,8 +86,16 @@ button {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
+    
     align-items: center;
 
+    @media(max-width: 1100px) {
+        margin: 0;
+    }
+
+    @media(max-width: 440px) {
+        margin: 0;
+    }
     
         
         &-item {
@@ -102,6 +113,7 @@ button {
 .mobile__button {
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
 }
 .mobile__btn-white {
     color: #173A56;
@@ -738,6 +750,10 @@ button {
             font-weight: 500;
             font-size: 16px;
             line-height: 24px;
+
+            @media(max-width: 440px) {
+                margin-top: 20px;
+            }
         }
         
     }
